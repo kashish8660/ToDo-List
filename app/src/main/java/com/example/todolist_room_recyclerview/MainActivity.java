@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Edit_Task_Activity.class);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent,1); //"startActivityForResult()" expects a result back from "setResult()" called in target activity. This mechanism 
+                //uses 3 functions - startActivityForResult(), setResult() and onActivityResult() where each of these functions uses an intent. This mechanism can 
+                //be used for many use-cases like gettimg user input, picking an image from gallery or authentication, etc
             }
         });
     }
